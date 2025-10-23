@@ -82,7 +82,8 @@ Expected money lines:
   `[DETECTOR] UNAUTHORIZED GRANT DETECTED: ...`  
   `[AUTOFIX] Blocked unauthorized grant.`
 
-**Screenshot the three runs** (benign, injected, injected+autofix). That’s the demo.
+<img width="852" height="280" alt="Screenshot 2025-10-23 at 10 34 19 AM" src="https://github.com/user-attachments/assets/cee7cebd-95a3-483b-b8cd-30e1f6ec5913" />
+
 
 ---
 
@@ -115,12 +116,8 @@ Re-run to see the contrast: whitelisted grants flow; everything else gets flagge
 
 ---
 
-## Impact (why this framing)
+## Impact
 
 - Turns “prompt injection” into concrete, auditable **state transitions**.  
 - Makes agent tool-use **observable** and **enforceable**.  
 - Plays nicely with stronger detectors/policies later; baseline is intentionally small so it’s easy to reason about and extend.
-
----
-
-If you want to skim one thing, run the three cases and look for the red line. If you want to extend it, add a new tool/right in `model.yaml`, drop a new `cases/*.json`, and watch the state machine make the implications obvious.
