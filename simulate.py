@@ -14,7 +14,6 @@ def main():
     engine = PermEngine(args.model, autofix=case.get("autofix", False))
     events = case["events"]
 
-    # Lite pre-pass: if any note/reason looks like injection, we annotate it (purely for logging)
     for ev in events:
         if ev.get("type") in ("note", "grant"):
             text = ev.get("text") or ev.get("reason","")
@@ -23,7 +22,6 @@ def main():
 
     log, violations = engine.run(events)
 
-    # Pretty print
     print("=== RUN LOG ===")
     for line in log:
         print(line)
@@ -31,7 +29,7 @@ def main():
     if violations:
         print(f"VIOLATIONS: {len(violations)}")
         for v in violations:
-            # This is the line you screenshot
+
             print(v)
     else:
         print("No unauthorized grants detected.")
