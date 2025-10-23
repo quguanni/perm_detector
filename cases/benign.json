@@ -1,0 +1,10 @@
+
+{
+    "autofix": false,
+    "events": [
+      {"type": "note", "text": "User asks assistant to read a local file they already have rights for."},
+      {"type": "use", "subject": "assistant", "tool": "file_system", "right": "read"},
+      {"type": "note", "text": "No permission changes attempted."}
+    ]
+  }
+  

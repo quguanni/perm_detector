@@ -1,0 +1,10 @@
+subjects:
+  - assistant
+
+objects:
+  tools:
+    browser: [read] 
+    file_system: [read]
+
+policies:
+  allowed_grants: []

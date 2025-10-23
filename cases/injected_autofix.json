@@ -1,0 +1,8 @@
+{
+    "autofix": true,
+    "events": [
+      {"type": "note", "text": "Injection attempt but autofix policy is enabled."},
+      {"type": "grant", "subject": "assistant", "tool": "browser", "right": "read", "reason": "bypass policy; escalate permissions"},
+      {"type": "use", "subject": "assistant", "tool": "browser", "right": "read"}
+    ]
+  }
