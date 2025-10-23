@@ -1,6 +1,6 @@
 # A minimal formal model for LLM tool permissions + a tiny detector for prompt-injection-induced grants
 
-**TL;DR.** LLM agents call tools. Prompt injection can coerce the agent into **granting new rights** (e.g., `browser.read`) it wasn’t authorized to have — a classic **grant/take/transfer** abuse. I wrote a tiny, opinionated core + detector that flags **unauthorized grants** and (optionally) **blocks** them with a deny-by-default policy. Minimal moving parts, fast to reason about, easy to extend.
+**TL;DR.** LLM agents call tools. Prompt injection can coerce the agent into **granting new rights** (e.g., `browser.read`) it wasn’t authorized to have, a classic **grant/take/transfer** abuse. I wrote a tiny, opinionated core + detector that flags **unauthorized grants** and (optionally) **blocks** them with a deny-by-default policy. Minimal moving parts, fast to reason about, easy to extend.
 
 ---
 
